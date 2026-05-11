@@ -5,9 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Le Guide de l'Intercesseur</title>
-
-<!-- FONTS PREMIUM -->
+<title>Le Guide de l’Intercession</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +14,9 @@
 
 <style>
 
-/* RESET */
+/* =========================
+RESET
+========================= */
 
 *{
 margin:0;
@@ -29,23 +29,25 @@ scroll-behavior:smooth;
 }
 
 body{
+background:#f7f2eb;
+color:#1c1c1c;
 font-family:'Manrope',sans-serif;
-background:#f8f6f2;
-color:#1b1b1b;
 line-height:1.9;
 overflow-x:hidden;
 }
 
-/* NAVIGATION */
+/* =========================
+NAVBAR
+========================= */
 
 nav{
 position:fixed;
 top:0;
 width:100%;
 z-index:999;
-background:rgba(255,255,255,.92);
-backdrop-filter:blur(12px);
-box-shadow:0 4px 20px rgba(0,0,0,.05);
+background:rgba(247,242,235,.88);
+backdrop-filter:blur(18px);
+border-bottom:1px solid rgba(0,0,0,.05);
 }
 
 nav ul{
@@ -57,146 +59,245 @@ list-style:none;
 
 nav ul li a{
 display:block;
-padding:22px;
+padding:22px 18px;
 text-decoration:none;
-color:#1d1d1d;
+font-size:.9rem;
 font-weight:600;
-font-size:.95rem;
+color:#1d1d1d;
 transition:.3s;
 }
 
 nav ul li a:hover{
-color:#b28b5c;
+color:#b78b61;
 }
 
-/* HERO */
+/* =========================
+HERO
+========================= */
 
 .hero{
-height:100vh;
+min-height:100vh;
 
 background:
-linear-gradient(rgba(0,0,0,.72), rgba(0,0,0,.72)),
-url('https://images.unsplash.com/photo-1490730141103-6cac27aaab94?q=80&w=1800&auto=format&fit=crop');
+linear-gradient(rgba(0,0,0,.58), rgba(0,0,0,.72)),
+url('https://images.unsplash.com/photo-1507692049790-de58290a4334?q=80&w=1800&auto=format&fit=crop');
 
 background-size:cover;
 background-position:center;
 
 display:flex;
-align-items:center;
 justify-content:center;
+align-items:center;
+
+padding:120px 20px 80px;
 text-align:center;
-padding:20px;
 color:white;
+
+position:relative;
+overflow:hidden;
 }
 
 .hero-content{
-max-width:900px;
-animation:fadeIn 1.5s ease;
+max-width:950px;
+position:relative;
+z-index:2;
 }
+
+/* =========================
+LOGO
+========================= */
+
+.logo{
+width:150px;
+height:150px;
+object-fit:contain;
+margin-bottom:40px;
+border-radius:35px;
+background:white;
+padding:12px;
+
+box-shadow:
+0 10px 40px rgba(0,0,0,.25);
+}
+
+/* =========================
+HERO TEXT
+========================= */
 
 .hero h1{
 font-family:'Playfair Display',serif;
 font-size:6.5rem;
-font-weight:800;
 line-height:1;
-letter-spacing:-2px;
-margin-bottom:25px;
+letter-spacing:-3px;
+font-weight:700;
+margin-bottom:24px;
 }
 
-.hero p{
-font-size:1.3rem;
-max-width:700px;
-margin:auto;
-opacity:.95;
-margin-bottom:40px;
+.hero-subtitle{
+font-size:.92rem;
+letter-spacing:4px;
+text-transform:uppercase;
+opacity:.85;
+margin-bottom:45px;
 }
 
-.btn{
+.hero-btn{
 display:inline-block;
-padding:16px 38px;
-background:white;
+padding:16px 40px;
+background:#f7f2eb;
 color:#111;
+border-radius:999px;
 text-decoration:none;
-border-radius:50px;
 font-weight:700;
 transition:.3s;
 }
 
-.btn:hover{
+.hero-btn:hover{
 transform:translateY(-4px);
-background:#d9c4a4;
+background:#dcc4a1;
 }
 
-/* SECTIONS */
+/* =========================
+LAYOUT
+========================= */
 
 section{
-padding:120px 10%;
+padding:140px 8%;
 scroll-margin-top:120px;
 }
 
-.section-title{
+.container{
+max-width:1180px;
+margin:auto;
+}
+
+.chapter{
+margin-bottom:140px;
+}
+
+.chapter-top{
+margin-bottom:50px;
+}
+
+.chapter-number{
+font-size:6rem;
+font-weight:800;
+opacity:.06;
+line-height:1;
+margin-bottom:-25px;
+}
+
+.chapter-title{
 font-family:'Playfair Display',serif;
 font-size:4rem;
+line-height:1.1;
 letter-spacing:-1px;
-margin-bottom:25px;
-position:relative;
+margin-bottom:18px;
 }
 
-.section-title::after{
-content:'';
-display:block;
+.chapter-line{
 width:90px;
-height:3px;
-background:#b28b5c;
-margin-top:14px;
+height:2px;
+background:#b78b61;
+border-radius:999px;
 }
 
-/* CARDS */
+/* =========================
+EDITORIAL BLOCK
+========================= */
 
-.card{
-background:white;
-padding:45px;
-border-radius:30px;
-margin-top:35px;
-box-shadow:0 12px 35px rgba(0,0,0,.06);
-transition:.4s;
+.editorial-block{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+margin-bottom:45px;
 }
 
-.card:hover{
-transform:translateY(-6px);
-box-shadow:0 18px 45px rgba(0,0,0,.1);
+.editorial-card{
+background:#fffdfa;
+border-radius:36px;
+padding:50px;
+border:1px solid rgba(0,0,0,.04);
+
+box-shadow:
+0 10px 35px rgba(0,0,0,.04);
 }
 
-.card h3{
+.editorial-card h3{
 font-family:'Playfair Display',serif;
 font-size:2.1rem;
-margin-bottom:18px;
-color:#222;
+line-height:1.2;
+margin-bottom:22px;
+color:#171717;
 }
 
-.card p{
-margin-bottom:18px;
-color:#444;
+.editorial-card p{
+margin-bottom:20px;
+color:#4b4b4b;
+font-size:1rem;
 }
 
-.card ul{
-padding-left:20px;
-margin-top:15px;
+/* =========================
+PREMIUM LIST
+========================= */
+
+.premium-list{
+margin-top:25px;
 }
 
-.card li{
-margin-bottom:10px;
-color:#444;
+.list-item{
+display:flex;
+gap:16px;
+padding:18px 0;
+border-bottom:1px solid rgba(0,0,0,.05);
 }
 
-/* QUOTE */
+.list-item:last-child{
+border-bottom:none;
+}
+
+.bullet{
+color:#b78b61;
+font-size:1.2rem;
+margin-top:3px;
+}
+
+.list-item p{
+margin:0;
+}
+
+/* =========================
+FULL WIDTH CARD
+========================= */
+
+.full-card{
+background:#fffdfa;
+padding:60px;
+border-radius:40px;
+margin-top:40px;
+
+border:1px solid rgba(0,0,0,.04);
+
+box-shadow:
+0 12px 35px rgba(0,0,0,.04);
+}
+
+.full-card h3{
+font-family:'Playfair Display',serif;
+font-size:2.3rem;
+margin-bottom:22px;
+}
+
+/* =========================
+QUOTE
+========================= */
 
 .quote{
-background:#151515;
+background:#141414;
 color:white;
-padding:80px;
-border-radius:35px;
-margin-top:60px;
+padding:90px 60px;
+border-radius:45px;
+margin-top:55px;
 text-align:center;
 }
 
@@ -208,66 +309,102 @@ line-height:1.5;
 
 .quote span{
 display:block;
-margin-top:25px;
-opacity:.7;
+margin-top:28px;
 letter-spacing:3px;
 font-size:.9rem;
+opacity:.7;
 }
 
-/* FOOTER */
+/* =========================
+GRID
+========================= */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:30px;
+}
+
+/* =========================
+FOOTER
+========================= */
 
 footer{
 background:#111;
 color:white;
+padding:100px 20px;
 text-align:center;
-padding:80px 20px;
 }
 
 footer h2{
 font-family:'Playfair Display',serif;
 font-size:3rem;
-margin-bottom:15px;
+margin-bottom:16px;
 }
 
-/* ANIMATION */
-
-@keyframes fadeIn{
-
-from{
-opacity:0;
-transform:translateY(30px);
+footer p{
+opacity:.7;
 }
 
-to{
-opacity:1;
-transform:translateY(0);
+/* =========================
+RESPONSIVE
+========================= */
+
+@media(max-width:980px){
+
+.editorial-block{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:4.5rem;
+}
+
+.chapter-title{
+font-size:3rem;
 }
 
 }
-
-/* RESPONSIVE */
 
 @media(max-width:768px){
+
+.hero{
+padding-top:150px;
+}
 
 .hero h1{
 font-size:3.5rem;
 }
 
-.section-title{
-font-size:2.7rem;
+.chapter-title{
+font-size:2.5rem;
+}
+
+.chapter-number{
+font-size:4rem;
 }
 
 .quote{
-padding:40px;
+padding:45px 30px;
 }
 
 .quote p{
 font-size:1.5rem;
 }
 
+.editorial-card,
+.full-card{
+padding:35px;
+}
+
+.logo{
+width:110px;
+height:110px;
+}
+
 nav ul li a{
+font-size:.78rem;
 padding:14px;
-font-size:.85rem;
 }
 
 }
@@ -277,40 +414,40 @@ font-size:.85rem;
 
 <body>
 
-<!-- NAVBAR -->
-
 <nav>
 
 <ul>
 
-<li><a href="#introduction">Introduction</a></li>
-
+<li><a href="#intro">Introduction</a></li>
 <li><a href="#intercession">Intercession</a></li>
-
 <li><a href="#intercesseur">Intercesseur</a></li>
-
 <li><a href="#organisation">Organisation</a></li>
-
 <li><a href="#engagement">Engagement</a></li>
 
 </ul>
 
 </nav>
 
-<!-- HERO -->
-
 <header class="hero">
 
 <div class="hero-content">
 
-<h1>Le Guide de l'Intercesseur</h1>
+<img
+src="logo.jpeg"
+alt="Logo MFD Online"
+class="logo"
+>
 
-<p>
-Une vision spirituelle de l’intercession,
-de la consécration et de l’écoute du Saint-Esprit.
+<h1>
+Le Guide<br>
+de l’Intercession
+</h1>
+
+<p class="hero-subtitle">
+Département Intercession — MFD Online
 </p>
 
-<a href="#introduction" class="btn">
+<a href="#intro" class="hero-btn">
 Découvrir le guide
 </a>
 
@@ -318,15 +455,29 @@ Découvrir le guide
 
 </header>
 
-<!-- INTRODUCTION -->
+<!-- =========================
+INTRODUCTION
+========================= -->
 
-<section id="introduction">
+<section id="intro">
 
-<h2 class="section-title">
+<div class="container">
+
+<div class="chapter">
+
+<div class="chapter-top">
+
+<div class="chapter-number">01</div>
+
+<h2 class="chapter-title">
 Introduction
 </h2>
 
-<div class="card">
+<div class="chapter-line"></div>
+
+</div>
+
+<div class="full-card">
 
 <p>
 Ce règlement a été établi afin que chaque membre connaisse sa mission
@@ -338,17 +489,26 @@ l’ordre et le respect.
 Le Département Intercession a pour vocation de :
 </p>
 
-<ul>
+<div class="premium-list">
 
-<li>faire naître, développer et encourager une culture de l’intercession au sein de MFD Online ;</li>
+<div class="list-item">
+<div class="bullet">•</div>
+<p>Faire naître, développer et encourager une culture de l’intercession au sein de MFD Online.</p>
+</div>
 
-<li>renforcer l’unité du corps de Christ ;</li>
+<div class="list-item">
+<div class="bullet">•</div>
+<p>Renforcer l’unité du corps de Christ.</p>
+</div>
 
-<li>faire de l’intercession une composante essentielle de la vie de l’Église.</li>
+<div class="list-item">
+<div class="bullet">•</div>
+<p>Faire de l’intercession une composante essentielle de la vie de l’Église.</p>
+</div>
 
-</ul>
+</div>
 
-<p>
+<p style="margin-top:28px;">
 Le département organise des réunions d’intercession entre les MDA
 ainsi que des temps d’intercession ouverts à toute l’Église.
 </p>
@@ -362,21 +522,43 @@ ainsi que des temps d’intercession ouverts à toute l’Église.
 et se tienne à la brèche devant moi… »
 </p>
 
-<span>ÉZÉCHIEL 22:30</span>
+<span>
+ÉZÉCHIEL 22:30
+</span>
+
+</div>
+
+</div>
 
 </div>
 
 </section>
 
-<!-- PARTIE I -->
+<!-- =========================
+PARTIE I
+========================= -->
 
 <section id="intercession">
 
-<h2 class="section-title">
-PARTIE I — L’INTERCESSION
+<div class="container">
+
+<div class="chapter">
+
+<div class="chapter-top">
+
+<div class="chapter-number">02</div>
+
+<h2 class="chapter-title">
+L’Intercession
 </h2>
 
-<div class="card">
+<div class="chapter-line"></div>
+
+</div>
+
+<div class="editorial-block">
+
+<div class="editorial-card">
 
 <h3>1. Qu’est-ce que l’intercession ?</h3>
 
@@ -385,44 +567,56 @@ L’intercession n’est pas seulement une prière.
 C’est une œuvre de médiation.
 </p>
 
-<p>
-Intercéder signifie :
-</p>
+<p>Intercéder signifie :</p>
 
-<ul>
+<div class="premium-list">
 
-<li>s’interposer ;</li>
+<div class="list-item">
+<div class="bullet">•</div>
+<p>S’interposer</p>
+</div>
 
-<li>intervenir ;</li>
+<div class="list-item">
+<div class="bullet">•</div>
+<p>Intervenir</p>
+</div>
 
-<li>agir comme médiateur ;</li>
+<div class="list-item">
+<div class="bullet">•</div>
+<p>Agir comme médiateur</p>
+</div>
 
-<li>se tenir devant Dieu en faveur d’une autre personne.</li>
+<div class="list-item">
+<div class="bullet">•</div>
+<p>Se tenir devant Dieu en faveur d’une autre personne</p>
+</div>
 
-</ul>
+</div>
 
-<p>
+<p style="margin-top:20px;">
 Comme un avocat plaide une cause devant une autorité,
 l’intercesseur se tient devant Dieu pour les hommes.
 </p>
 
 </div>
 
-<div class="card">
+<div class="editorial-card">
 
-<h3>2. L’intercession : une position spirituelle</h3>
+<h3>2. Une position spirituelle</h3>
 
 <p>
 L’intercession est une position spirituelle avant d’être une activité.
 </p>
 
 <p>
-Être intercesseur, c’est développer une intimité profonde avec Dieu.
+Être intercesseur,
+c’est développer une intimité profonde avec Dieu.
 </p>
 
 <p>
 Le signe d’une véritable intimité avec Dieu est la capacité
-à porter ce que Dieu porte et à prier selon Son cœur.
+à porter ce que Dieu porte
+et à prier selon Son cœur.
 </p>
 
 <p>
@@ -432,7 +626,11 @@ il cherche d’abord à demeurer avec Dieu.
 
 </div>
 
-<div class="card">
+</div>
+
+<div class="editorial-block">
+
+<div class="editorial-card">
 
 <h3>3. L’intercession et la mort à soi</h3>
 
@@ -445,25 +643,35 @@ Avant d’intercéder pour nous,
 Il s’est donné Lui-même.
 </p>
 
-<p>
-L’intercesseur doit apprendre à :
-</p>
+<p>L’intercesseur doit apprendre à :</p>
 
-<ul>
+<div class="premium-list">
 
-<li>mourir à lui-même ;</li>
+<div class="list-item">
+<div class="bullet">•</div>
+<p>Mourir à lui-même</p>
+</div>
 
-<li>renoncer à ses propres désirs ;</li>
+<div class="list-item">
+<div class="bullet">•</div>
+<p>Renoncer à ses propres désirs</p>
+</div>
 
-<li>porter les fardeaux des autres ;</li>
+<div class="list-item">
+<div class="bullet">•</div>
+<p>Porter les fardeaux des autres</p>
+</div>
 
-<li>rechercher la volonté de Dieu avant la sienne.</li>
-
-</ul>
+<div class="list-item">
+<div class="bullet">•</div>
+<p>Rechercher la volonté de Dieu avant la sienne</p>
+</div>
 
 </div>
 
-<div class="card">
+</div>
+
+<div class="editorial-card">
 
 <h3>4. L’intercesseur écoute avant de prier</h3>
 
@@ -488,37 +696,74 @@ mais savoir écouter le Saint-Esprit.
 
 </div>
 
-<div class="card">
+</div>
+
+<div class="full-card">
 
 <h3>5. Le rôle du Saint-Esprit</h3>
 
-<ul>
+<div class="premium-list">
 
-<li>dirige les sujets de prière ;</li>
+<div class="list-item">
+<div class="bullet">•</div>
+<p>Dirige les sujets de prière</p>
+</div>
 
-<li>donne le discernement ;</li>
+<div class="list-item">
+<div class="bullet">•</div>
+<p>Donne le discernement</p>
+</div>
 
-<li>communique des paroles prophétiques ;</li>
+<div class="list-item">
+<div class="bullet">•</div>
+<p>Communique des paroles prophétiques</p>
+</div>
 
-<li>fortifie l’intercesseur ;</li>
+<div class="list-item">
+<div class="bullet">•</div>
+<p>Fortifie l’intercesseur</p>
+</div>
 
-<li>révèle les besoins spirituels.</li>
+<div class="list-item">
+<div class="bullet">•</div>
+<p>Révèle les besoins spirituels</p>
+</div>
 
-</ul>
+</div>
+
+</div>
+
+</div>
 
 </div>
 
 </section>
 
-<!-- PARTIE II -->
+<!-- =========================
+PARTIE II
+========================= -->
 
 <section id="intercesseur">
 
-<h2 class="section-title">
-PARTIE II — L’INTERCESSEUR
+<div class="container">
+
+<div class="chapter">
+
+<div class="chapter-top">
+
+<div class="chapter-number">03</div>
+
+<h2 class="chapter-title">
+L’Intercesseur
 </h2>
 
-<div class="card">
+<div class="chapter-line"></div>
+
+</div>
+
+<div class="editorial-block">
+
+<div class="editorial-card">
 
 <h3>1. Qui est l’intercesseur ?</h3>
 
@@ -526,23 +771,38 @@ PARTIE II — L’INTERCESSEUR
 Un intercesseur est une personne qui se tient à la brèche pour :
 </p>
 
-<ul>
+<div class="premium-list">
 
-<li>l’Église ;</li>
+<div class="list-item">
+<div class="bullet">•</div>
+<p>L’Église</p>
+</div>
 
-<li>les familles ;</li>
+<div class="list-item">
+<div class="bullet">•</div>
+<p>Les familles</p>
+</div>
 
-<li>les territoires ;</li>
+<div class="list-item">
+<div class="bullet">•</div>
+<p>Les territoires</p>
+</div>
 
-<li>les nations ;</li>
+<div class="list-item">
+<div class="bullet">•</div>
+<p>Les nations</p>
+</div>
 
-<li>les vies.</li>
-
-</ul>
+<div class="list-item">
+<div class="bullet">•</div>
+<p>Les vies</p>
+</div>
 
 </div>
 
-<div class="card">
+</div>
+
+<div class="editorial-card">
 
 <h3>2. Tous appelés à intercéder</h3>
 
@@ -554,190 +814,281 @@ Tous les chrétiens sont appelés à l’intercession.
 Chaque croyant peut prier pour :
 </p>
 
-<ul>
+<div class="premium-list">
 
-<li>sa famille ;</li>
+<div class="list-item">
+<div class="bullet">•</div>
+<p>Sa famille</p>
+</div>
 
-<li>son travail ;</li>
+<div class="list-item">
+<div class="bullet">•</div>
+<p>Son travail</p>
+</div>
 
-<li>son Église ;</li>
+<div class="list-item">
+<div class="bullet">•</div>
+<p>Son Église</p>
+</div>
 
-<li>sa ville ;</li>
+<div class="list-item">
+<div class="bullet">•</div>
+<p>Sa ville</p>
+</div>
 
-<li>les nations.</li>
-
-</ul>
+<div class="list-item">
+<div class="bullet">•</div>
+<p>Les nations</p>
+</div>
 
 </div>
 
-<div class="card">
+</div>
+
+</div>
+
+<div class="full-card">
 
 <h3>3. Ce que l’intercesseur doit savoir</h3>
 
-<ul>
+<div class="premium-list">
 
-<li>avoir accepté Jésus-Christ comme Seigneur et Sauveur ;</li>
+<div class="list-item">
+<div class="bullet">•</div>
+<p>Avoir accepté Jésus-Christ comme Seigneur et Sauveur</p>
+</div>
 
-<li>vivre dans la sanctification ;</li>
+<div class="list-item">
+<div class="bullet">•</div>
+<p>Vivre dans la sanctification</p>
+</div>
 
-<li>être consacré ;</li>
+<div class="list-item">
+<div class="bullet">•</div>
+<p>Être consacré et soumis aux autorités spirituelles</p>
+</div>
 
-<li>participer régulièrement aux prières d’unité ;</li>
+<div class="list-item">
+<div class="bullet">•</div>
+<p>Participer régulièrement aux prières d’unité</p>
+</div>
 
-<li>savoir rendre des comptes ;</li>
+<div class="list-item">
+<div class="bullet">•</div>
+<p>Savoir rendre des comptes</p>
+</div>
 
-<li>accepter la correction ;</li>
+<div class="list-item">
+<div class="bullet">•</div>
+<p>Accepter la correction</p>
+</div>
 
-<li>préserver un bon témoignage.</li>
+<div class="list-item">
+<div class="bullet">•</div>
+<p>Préserver un bon témoignage</p>
+</div>
 
-</ul>
+<div class="list-item">
+<div class="bullet">•</div>
+<p>Suivre les enseignements de l’Église</p>
+</div>
 
 </div>
 
-<div class="card">
+</div>
 
-<h3>4. Le cœur de l’intercesseur</h3>
-
-<p>
-L’intercesseur croit en la puissance de la prière.
-</p>
-
-<p>
-Il sait que l’intercession est un combat spirituel qui demande :
-</p>
-
-<ul>
-
-<li>la foi ;</li>
-
-<li>la persévérance ;</li>
-
-<li>la constance ;</li>
-
-<li>l’obéissance.</li>
-
-</ul>
+</div>
 
 </div>
 
 </section>
 
-<!-- PARTIE III -->
+<!-- =========================
+ORGANISATION
+========================= -->
 
 <section id="organisation">
 
-<h2 class="section-title">
-PARTIE III — ORGANISATION DU DÉPARTEMENT
+<div class="container">
+
+<div class="chapter">
+
+<div class="chapter-top">
+
+<div class="chapter-number">04</div>
+
+<h2 class="chapter-title">
+Organisation du Département
 </h2>
 
-<div class="card">
+<div class="chapter-line"></div>
+
+</div>
+
+<div class="grid">
+
+<div class="editorial-card">
 
 <h3>Pôle Gestion</h3>
 
-<ul>
+<div class="premium-list">
 
-<li>communication ;</li>
+<div class="list-item">
+<div class="bullet">•</div>
+<p>Communication</p>
+</div>
 
-<li>planning mensuel ;</li>
+<div class="list-item">
+<div class="bullet">•</div>
+<p>Planning mensuel</p>
+</div>
 
-<li>tableau de prière ;</li>
+<div class="list-item">
+<div class="bullet">•</div>
+<p>Tableau de prière</p>
+</div>
 
-<li>organisation des cultes d’intercession.</li>
-
-</ul>
+<div class="list-item">
+<div class="bullet">•</div>
+<p>Organisation des cultes d’intercession</p>
+</div>
 
 </div>
 
-<div class="card">
+</div>
+
+<div class="editorial-card">
 
 <h3>Pôle Évangélisation & Territoires</h3>
 
-<ul>
+<div class="premium-list">
 
-<li>gérer l’intercession des villes et territoires ;</li>
+<div class="list-item">
+<div class="bullet">•</div>
+<p>Gérer l’intercession des villes et territoires</p>
+</div>
 
-<li>soutenir les actions d’évangélisation ;</li>
+<div class="list-item">
+<div class="bullet">•</div>
+<p>Soutenir les actions d’évangélisation</p>
+</div>
 
-<li>couvrir spirituellement les événements et missions.</li>
-
-</ul>
+<div class="list-item">
+<div class="bullet">•</div>
+<p>Couvrir spirituellement les événements et missions</p>
+</div>
 
 </div>
 
-<div class="card">
+</div>
+
+<div class="editorial-card">
 
 <h3>Pôle Communion</h3>
 
-<ul>
+<div class="premium-list">
 
-<li>favoriser l’unité du département ;</li>
+<div class="list-item">
+<div class="bullet">•</div>
+<p>Favoriser l’unité du département</p>
+</div>
 
-<li>développer la communion fraternelle ;</li>
+<div class="list-item">
+<div class="bullet">•</div>
+<p>Développer la communion fraternelle</p>
+</div>
 
-<li>encourager les interactions entre les membres.</li>
-
-</ul>
+<div class="list-item">
+<div class="bullet">•</div>
+<p>Encourager les interactions entre les membres</p>
+</div>
 
 </div>
 
-<div class="card">
+</div>
 
-<h3>Temps de prière</h3>
+</div>
 
-<p>
-Mardi : 21h
-</p>
-
-<p>
-Dimanche : 9h30
-suivi d’un temps d’intercession individuel.
-</p>
+</div>
 
 </div>
 
 </section>
 
-<!-- ENGAGEMENT -->
+<!-- =========================
+ENGAGEMENT
+========================= -->
 
 <section id="engagement">
 
-<h2 class="section-title">
-Conclusion — Notre Engagement
+<div class="container">
+
+<div class="chapter">
+
+<div class="chapter-top">
+
+<div class="chapter-number">05</div>
+
+<h2 class="chapter-title">
+Notre Engagement
 </h2>
 
-<div class="card">
+<div class="chapter-line"></div>
+
+</div>
+
+<div class="full-card">
 
 <p>
 En intégrant le Département Intercession de MFD Online,
 chaque membre s’engage à :
 </p>
 
-<ul>
+<div class="premium-list">
 
-<li>servir avec fidélité ;</li>
+<div class="list-item">
+<div class="bullet">•</div>
+<p>Servir avec fidélité</p>
+</div>
 
-<li>préserver l’unité ;</li>
+<div class="list-item">
+<div class="bullet">•</div>
+<p>Préserver l’unité</p>
+</div>
 
-<li>respecter l’ordre établi ;</li>
+<div class="list-item">
+<div class="bullet">•</div>
+<p>Respecter l’ordre établi</p>
+</div>
 
-<li>grandir spirituellement ;</li>
+<div class="list-item">
+<div class="bullet">•</div>
+<p>Grandir spirituellement</p>
+</div>
 
-<li>marcher dans l’amour, l’humilité et la consécration.</li>
+<div class="list-item">
+<div class="bullet">•</div>
+<p>Marcher dans l’amour, l’humilité et la consécration</p>
+</div>
 
-</ul>
+</div>
+
+</div>
+
+</div>
 
 </div>
 
 </section>
 
-<!-- FOOTER -->
-
 <footer>
 
-<h2>Le Guide de l'Intercesseur</h2>
+<h2>
+Le Guide de l’Intercession
+</h2>
 
 <p>
-MFD Online — Vision Intercession
+MFD Online — Département Intercession
 </p>
 
 </footer>
