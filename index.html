@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Le Guide de l'Intercesseur</title>
+
+<!-- FONTS PREMIUM -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+/* RESET */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Manrope',sans-serif;
+background:#f8f6f2;
+color:#1b1b1b;
+line-height:1.9;
+overflow-x:hidden;
+}
+
+/* NAVIGATION */
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+z-index:999;
+background:rgba(255,255,255,.92);
+backdrop-filter:blur(12px);
+box-shadow:0 4px 20px rgba(0,0,0,.05);
+}
+
+nav ul{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+list-style:none;
+}
+
+nav ul li a{
+display:block;
+padding:22px;
+text-decoration:none;
+color:#1d1d1d;
+font-weight:600;
+font-size:.95rem;
+transition:.3s;
+}
+
+nav ul li a:hover{
+color:#b28b5c;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+
+background:
+linear-gradient(rgba(0,0,0,.72), rgba(0,0,0,.72)),
+url('https://images.unsplash.com/photo-1490730141103-6cac27aaab94?q=80&w=1800&auto=format&fit=crop');
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:20px;
+color:white;
+}
+
+.hero-content{
+max-width:900px;
+animation:fadeIn 1.5s ease;
+}
+
+.hero h1{
+font-family:'Playfair Display',serif;
+font-size:6.5rem;
+font-weight:800;
+line-height:1;
+letter-spacing:-2px;
+margin-bottom:25px;
+}
+
+.hero p{
+font-size:1.3rem;
+max-width:700px;
+margin:auto;
+opacity:.95;
+margin-bottom:40px;
+}
+
+.btn{
+display:inline-block;
+padding:16px 38px;
+background:white;
+color:#111;
+text-decoration:none;
+border-radius:50px;
+font-weight:700;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-4px);
+background:#d9c4a4;
+}
+
+/* SECTIONS */
+
+section{
+padding:120px 10%;
+scroll-margin-top:120px;
+}
+
+.section-title{
+font-family:'Playfair Display',serif;
+font-size:4rem;
+letter-spacing:-1px;
+margin-bottom:25px;
+position:relative;
+}
+
+.section-title::after{
+content:'';
+display:block;
+width:90px;
+height:3px;
+background:#b28b5c;
+margin-top:14px;
+}
+
+/* CARDS */
+
+.card{
+background:white;
+padding:45px;
+border-radius:30px;
+margin-top:35px;
+box-shadow:0 12px 35px rgba(0,0,0,.06);
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-6px);
+box-shadow:0 18px 45px rgba(0,0,0,.1);
+}
+
+.card h3{
+font-family:'Playfair Display',serif;
+font-size:2.1rem;
+margin-bottom:18px;
+color:#222;
+}
+
+.card p{
+margin-bottom:18px;
+color:#444;
+}
+
+.card ul{
+padding-left:20px;
+margin-top:15px;
+}
+
+.card li{
+margin-bottom:10px;
+color:#444;
+}
+
+/* QUOTE */
+
+.quote{
+background:#151515;
+color:white;
+padding:80px;
+border-radius:35px;
+margin-top:60px;
+text-align:center;
+}
+
+.quote p{
+font-family:'Playfair Display',serif;
+font-size:2.3rem;
+line-height:1.5;
+}
+
+.quote span{
+display:block;
+margin-top:25px;
+opacity:.7;
+letter-spacing:3px;
+font-size:.9rem;
+}
+
+/* FOOTER */
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:80px 20px;
+}
+
+footer h2{
+font-family:'Playfair Display',serif;
+font-size:3rem;
+margin-bottom:15px;
+}
+
+/* ANIMATION */
+
+@keyframes fadeIn{
+
+from{
+opacity:0;
+transform:translateY(30px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:3.5rem;
+}
+
+.section-title{
+font-size:2.7rem;
+}
+
+.quote{
+padding:40px;
+}
+
+.quote p{
+font-size:1.5rem;
+}
+
+nav ul li a{
+padding:14px;
+font-size:.85rem;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<ul>
+
+<li><a href="#introduction">Introduction</a></li>
+
+<li><a href="#intercession">Intercession</a></li>
+
+<li><a href="#intercesseur">Intercesseur</a></li>
+
+<li><a href="#organisation">Organisation</a></li>
+
+<li><a href="#engagement">Engagement</a></li>
+
+</ul>
+
+</nav>
+
+<!-- HERO -->
+
+<header class="hero">
+
+<div class="hero-content">
+
+<h1>Le Guide de l'Intercesseur</h1>
+
+<p>
+Une vision spirituelle de l’intercession,
+de la consécration et de l’écoute du Saint-Esprit.
+</p>
+
+<a href="#introduction" class="btn">
+Découvrir le guide
+</a>
+
+</div>
+
+</header>
+
+<!-- INTRODUCTION -->
+
+<section id="introduction">
+
+<h2 class="section-title">
+Introduction
+</h2>
+
+<div class="card">
+
+<p>
+Ce règlement a été établi afin que chaque membre connaisse sa mission
+et contribue à l’avancement du département dans l’amour,
+l’ordre et le respect.
+</p>
+
+<p>
+Le Département Intercession a pour vocation de :
+</p>
+
+<ul>
+
+<li>faire naître, développer et encourager une culture de l’intercession au sein de MFD Online ;</li>
+
+<li>renforcer l’unité du corps de Christ ;</li>
+
+<li>faire de l’intercession une composante essentielle de la vie de l’Église.</li>
+
+</ul>
+
+<p>
+Le département organise des réunions d’intercession entre les MDA
+ainsi que des temps d’intercession ouverts à toute l’Église.
+</p>
+
+</div>
+
+<div class="quote">
+
+<p>
+« Je cherche parmi eux un homme qui élève un mur
+et se tienne à la brèche devant moi… »
+</p>
+
+<span>ÉZÉCHIEL 22:30</span>
+
+</div>
+
+</section>
+
+<!-- PARTIE I -->
+
+<section id="intercession">
+
+<h2 class="section-title">
+PARTIE I — L’INTERCESSION
+</h2>
+
+<div class="card">
+
+<h3>1. Qu’est-ce que l’intercession ?</h3>
+
+<p>
+L’intercession n’est pas seulement une prière.
+C’est une œuvre de médiation.
+</p>
+
+<p>
+Intercéder signifie :
+</p>
+
+<ul>
+
+<li>s’interposer ;</li>
+
+<li>intervenir ;</li>
+
+<li>agir comme médiateur ;</li>
+
+<li>se tenir devant Dieu en faveur d’une autre personne.</li>
+
+</ul>
+
+<p>
+Comme un avocat plaide une cause devant une autorité,
+l’intercesseur se tient devant Dieu pour les hommes.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>2. L’intercession : une position spirituelle</h3>
+
+<p>
+L’intercession est une position spirituelle avant d’être une activité.
+</p>
+
+<p>
+Être intercesseur, c’est développer une intimité profonde avec Dieu.
+</p>
+
+<p>
+Le signe d’une véritable intimité avec Dieu est la capacité
+à porter ce que Dieu porte et à prier selon Son cœur.
+</p>
+
+<p>
+L’intercesseur ne cherche pas seulement à beaucoup prier :
+il cherche d’abord à demeurer avec Dieu.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>3. L’intercession et la mort à soi</h3>
+
+<p>
+Jésus-Christ est le modèle parfait de l’intercesseur.
+</p>
+
+<p>
+Avant d’intercéder pour nous,
+Il s’est donné Lui-même.
+</p>
+
+<p>
+L’intercesseur doit apprendre à :
+</p>
+
+<ul>
+
+<li>mourir à lui-même ;</li>
+
+<li>renoncer à ses propres désirs ;</li>
+
+<li>porter les fardeaux des autres ;</li>
+
+<li>rechercher la volonté de Dieu avant la sienne.</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<h3>4. L’intercesseur écoute avant de prier</h3>
+
+<p>
+L’intercession ne consiste pas d’abord à parler,
+mais à écouter Dieu.
+</p>
+
+<p>
+Un intercesseur est un interprète spirituel :
+il reçoit les intentions de Dieu afin de prier selon Sa volonté.
+</p>
+
+<p>
+Être intercesseur ne signifie pas savoir bien parler,
+mais savoir écouter le Saint-Esprit.
+</p>
+
+<p>
+« Seigneur, enseigne-moi à prier. »
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>5. Le rôle du Saint-Esprit</h3>
+
+<ul>
+
+<li>dirige les sujets de prière ;</li>
+
+<li>donne le discernement ;</li>
+
+<li>communique des paroles prophétiques ;</li>
+
+<li>fortifie l’intercesseur ;</li>
+
+<li>révèle les besoins spirituels.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- PARTIE II -->
+
+<section id="intercesseur">
+
+<h2 class="section-title">
+PARTIE II — L’INTERCESSEUR
+</h2>
+
+<div class="card">
+
+<h3>1. Qui est l’intercesseur ?</h3>
+
+<p>
+Un intercesseur est une personne qui se tient à la brèche pour :
+</p>
+
+<ul>
+
+<li>l’Église ;</li>
+
+<li>les familles ;</li>
+
+<li>les territoires ;</li>
+
+<li>les nations ;</li>
+
+<li>les vies.</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<h3>2. Tous appelés à intercéder</h3>
+
+<p>
+Tous les chrétiens sont appelés à l’intercession.
+</p>
+
+<p>
+Chaque croyant peut prier pour :
+</p>
+
+<ul>
+
+<li>sa famille ;</li>
+
+<li>son travail ;</li>
+
+<li>son Église ;</li>
+
+<li>sa ville ;</li>
+
+<li>les nations.</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<h3>3. Ce que l’intercesseur doit savoir</h3>
+
+<ul>
+
+<li>avoir accepté Jésus-Christ comme Seigneur et Sauveur ;</li>
+
+<li>vivre dans la sanctification ;</li>
+
+<li>être consacré ;</li>
+
+<li>participer régulièrement aux prières d’unité ;</li>
+
+<li>savoir rendre des comptes ;</li>
+
+<li>accepter la correction ;</li>
+
+<li>préserver un bon témoignage.</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<h3>4. Le cœur de l’intercesseur</h3>
+
+<p>
+L’intercesseur croit en la puissance de la prière.
+</p>
+
+<p>
+Il sait que l’intercession est un combat spirituel qui demande :
+</p>
+
+<ul>
+
+<li>la foi ;</li>
+
+<li>la persévérance ;</li>
+
+<li>la constance ;</li>
+
+<li>l’obéissance.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- PARTIE III -->
+
+<section id="organisation">
+
+<h2 class="section-title">
+PARTIE III — ORGANISATION DU DÉPARTEMENT
+</h2>
+
+<div class="card">
+
+<h3>Pôle Gestion</h3>
+
+<ul>
+
+<li>communication ;</li>
+
+<li>planning mensuel ;</li>
+
+<li>tableau de prière ;</li>
+
+<li>organisation des cultes d’intercession.</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<h3>Pôle Évangélisation & Territoires</h3>
+
+<ul>
+
+<li>gérer l’intercession des villes et territoires ;</li>
+
+<li>soutenir les actions d’évangélisation ;</li>
+
+<li>couvrir spirituellement les événements et missions.</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<h3>Pôle Communion</h3>
+
+<ul>
+
+<li>favoriser l’unité du département ;</li>
+
+<li>développer la communion fraternelle ;</li>
+
+<li>encourager les interactions entre les membres.</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<h3>Temps de prière</h3>
+
+<p>
+Mardi : 21h
+</p>
+
+<p>
+Dimanche : 9h30
+suivi d’un temps d’intercession individuel.
+</p>
+
+</div>
+
+</section>
+
+<!-- ENGAGEMENT -->
+
+<section id="engagement">
+
+<h2 class="section-title">
+Conclusion — Notre Engagement
+</h2>
+
+<div class="card">
+
+<p>
+En intégrant le Département Intercession de MFD Online,
+chaque membre s’engage à :
+</p>
+
+<ul>
+
+<li>servir avec fidélité ;</li>
+
+<li>préserver l’unité ;</li>
+
+<li>respecter l’ordre établi ;</li>
+
+<li>grandir spirituellement ;</li>
+
+<li>marcher dans l’amour, l’humilité et la consécration.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<h2>Le Guide de l'Intercesseur</h2>
+
+<p>
+MFD Online — Vision Intercession
+</p>
+
+</footer>
+
+</body>
+</html>
